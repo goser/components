@@ -2,8 +2,8 @@
     "name": "@goser/components",
     "version": "0.0.1",
     "license": "MIT",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "src/index.js",
+    "types": "src/index.d.ts",
     "private": "true",
     "repository": {
         "type": "git",
@@ -28,7 +28,7 @@
         "test": "jest"
     },
     "files": [
-        "dist/**/*.*"
+        "src/**/*.*"
     ],
     "dependencies": {
         "@goser/common": "https://github.com/goser/common.git"

@@ -5,7 +5,7 @@
         "jsx": "react-jsx",
         "module": "commonjs",
         "moduleResolution": "node",
-        "outDir": "dist",
+        "outDir": "src",
         "rootDir": "src",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
@@ -20,7 +20,8 @@
         ]
     },
     "exclude": [
-        "dist/**/*",
+        "dist/**/*.js",
+        "dist/**/*.d.ts",
         "src/**/*.test.ts",
         "src/**/*.test.tsx"
     ]
