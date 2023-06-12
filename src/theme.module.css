@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --std-color: #000;
+    --std-button-label-color: var(--std-color);
+
+    --std-horizontal-padding: 10px;
+    --std-vertical-padding: 5px;
+    --std-padding: var(--std-vertical-padding) var(--std-horizontal-padding);
+
+}

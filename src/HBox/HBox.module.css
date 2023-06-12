@@ -1,0 +1,6 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: var(--std-horizontal-padding);
+    padding: var(--std-padding);
+}
