@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, MouseEventHandler, PropsWithChildren } from 'react';
 type Props = {
     className?: string;
-    label?: string;
-};
+    onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+} & PropsWithChildren;
 export declare const Button: FC<Props>;
 export {};

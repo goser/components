@@ -1,14 +1,12 @@
-import {cls} from '@goser/common';
-import {FC} from 'react';
+import { cls } from '@goser/common';
+import { FC, MouseEventHandler, PropsWithChildren } from 'react';
 import styles from './Button.module.css';
 
 type Props = {
     className?: string;
-    label?: string;
-};
+    onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+} & PropsWithChildren;
 
-export const Button: FC<Props> = ({className, label}) => {
-    return <button className={cls(className, styles.main)}>
-        <span className={cls(styles.label)}>{label}</span>
-    </button>;
+export const Button: FC<Props> = ({ className, children, onClick }) => {
+    return <button className={cls(className, styles.main)} onClick={onClick}>{children}</button>
 };
