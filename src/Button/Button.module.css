@@ -2,7 +2,3 @@
     cursor: pointer;
     padding: var(--std-padding);
 }
-
-.label {
-    color: var(--std-button-label-color);
-}
