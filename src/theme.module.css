@@ -36,6 +36,7 @@ h6 {
 }
 
 :root {
+    --std-app-margin: 20px;
     --std-font-size: 20px;
 
     --std-color: #000;
@@ -43,7 +44,8 @@ h6 {
     --std-horizontal-padding: 10px;
     --std-vertical-padding: 5px;
     --std-padding: var(--std-vertical-padding) var(--std-horizontal-padding);
-
+    --std-horizontal-gap: 10px;
+    --std-vertical-gap: 10px;
 }
 
 body {
@@ -51,4 +53,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: var(--std-font-size);
     color: var(--std-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
