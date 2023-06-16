@@ -2,10 +2,11 @@ import { FC, HTMLInputTypeAttribute } from 'react';
 type Props = {
     value: string;
     onChange?: (value: string) => void;
-    type?: HTMLInputTypeAttribute | undefined;
+    type?: HTMLInputTypeAttribute;
     onBlur?: () => void;
-    min?: number | string | undefined;
-    max?: number | string | undefined;
+    min?: number | string;
+    max?: number | string;
+    placeholder?: string;
 };
 export declare const Input: FC<Props>;
 export {};

@@ -7,10 +7,10 @@ exports.Input = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var Input_module_css_1 = __importDefault(require("./Input.module.css"));
 var Input = function (_a) {
-    var value = _a.value, onChange = _a.onChange, type = _a.type, onBlur = _a.onBlur, max = _a.max, min = _a.min;
+    var value = _a.value, onChange = _a.onChange, type = _a.type, onBlur = _a.onBlur, max = _a.max, min = _a.min, placeholder = _a.placeholder;
     var onInputChange = onChange ? function (event) {
         onChange(event.currentTarget.value);
     } : undefined;
-    return (0, jsx_runtime_1.jsx)("input", { type: type || 'text', className: Input_module_css_1.default.main, value: value, onChange: onInputChange, onBlur: onBlur, max: max, min: min });
+    return (0, jsx_runtime_1.jsx)("input", { type: type || 'text', className: Input_module_css_1.default.main, value: value, onChange: onInputChange, onBlur: onBlur, max: max, min: min, placeholder: placeholder });
 };
 exports.Input = Input;
