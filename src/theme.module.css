@@ -44,8 +44,10 @@ h6 {
     --std-horizontal-padding: 10px;
     --std-vertical-padding: 5px;
     --std-padding: var(--std-vertical-padding) var(--std-horizontal-padding);
+
     --std-horizontal-gap: 10px;
     --std-vertical-gap: 10px;
+    --std-gap: var(--std-vertical-gap) var(--std-horizontal-gap);
 }
 
 body {

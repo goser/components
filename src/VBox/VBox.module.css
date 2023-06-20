@@ -1,6 +1,6 @@
 .main {
     display: flex;
     flex-direction: column;
-    gap: var(--std-vertical-gap);
+    gap: var(--std-gap);
     padding: var(--std-padding);
 }
