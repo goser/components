@@ -1,4 +1,5 @@
 import { FC, HTMLInputTypeAttribute } from 'react';
+import { PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     value: string;
     onChange?: (value: string) => void;
@@ -7,6 +8,6 @@ type Props = {
     min?: number | string;
     max?: number | string;
     placeholder?: string;
-};
+} & PropsWithStyle;
 export declare const Input: FC<Props>;
 export {};

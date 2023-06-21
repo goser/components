@@ -1,7 +1,7 @@
 import { FC, MouseEventHandler, PropsWithChildren } from 'react';
+import { PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
-    className?: string;
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
-} & PropsWithChildren;
+} & PropsWithStyle & PropsWithChildren;
 export declare const Button: FC<Props>;
 export {};

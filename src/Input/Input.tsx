@@ -1,5 +1,7 @@
 import {ChangeEventHandler, FC, HTMLInputTypeAttribute} from 'react';
 import styles from './Input.module.css';
+import {PropsWithStyle} from '../types/PropsWithStyle';
+import {cls} from '@goser/common';
 
 type Props = {
     value: string;
@@ -9,15 +11,15 @@ type Props = {
     min?: number | string;
     max?: number | string;
     placeholder?: string;
-};
+} & PropsWithStyle;
 
-export const Input: FC<Props> = ({value, onChange, type, onBlur, max, min, placeholder}) => {
+export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder}) => {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.currentTarget.value);
     } : undefined;
     return <input
+        className={cls(className, styles.main)}
         type={type || 'text'}
-        className={styles.main}
         value={value}
         onChange={onInputChange}
         onBlur={onBlur}

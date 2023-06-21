@@ -1,14 +1,15 @@
-import { FC } from 'react';
-import { Input } from './Input';
+import {FC} from 'react';
+import {Input} from './Input';
+import {PropsWithStyle} from '../types/PropsWithStyle';
 
 type Props = {
-    value: number
-    onChange?: (newValue: number) => void
+    value: number;
+    onChange?: (newValue: number) => void;
     min?: number | undefined;
     max?: number | undefined;
-}
+} & PropsWithStyle;
 
-export const NumberInput: FC<Props> = ({ value, onChange, min, max }) => {
+export const NumberInput: FC<Props> = ({className, value, onChange, min, max}) => {
     let onInputChange: ((value: string) => void) | undefined;
     let onBlur: VoidFunction | undefined;
     if (onChange) {
@@ -26,5 +27,5 @@ export const NumberInput: FC<Props> = ({ value, onChange, min, max }) => {
             }
         };
     }
-    return <Input value={value.toString()} onChange={onInputChange} type='number' onBlur={onBlur} min={min} max={max} />
-}
+    return <Input className={className} value={value.toString()} onChange={onInputChange} type='number' onBlur={onBlur} min={min} max={max} />;
+};
