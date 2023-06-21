@@ -17,3 +17,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./useLocalStoredReducer"), exports);
 __exportStar(require("./useLocale"), exports);
 __exportStar(require("./useWordingContext"), exports);
+__exportStar(require("./useForceUpdate"), exports);

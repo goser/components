@@ -1,3 +1,7 @@
 .main {
     padding: var(--std-padding);
 }
+
+.invalid {
+    border-color: red;
+}

@@ -11,14 +11,15 @@ type Props = {
     min?: number | string;
     max?: number | string;
     placeholder?: string;
+    invalid?: boolean;
 } & PropsWithStyle;
 
-export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder}) => {
+export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid}) => {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.currentTarget.value);
     } : undefined;
     return <input
-        className={cls(className, styles.main)}
+        className={cls(className, styles.main, invalid && styles.invalid)}
         type={type || 'text'}
         value={value}
         onChange={onInputChange}

@@ -8,6 +8,7 @@ type Props = {
     min?: number | string;
     max?: number | string;
     placeholder?: string;
+    invalid?: boolean;
 } & PropsWithStyle;
 export declare const Input: FC<Props>;
 export {};
