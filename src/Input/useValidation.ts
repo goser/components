@@ -48,7 +48,6 @@ export const useValidation = <P extends ValidationMapProvider>(validationMapProv
                 isValid: fieldIsValid || !isValidating,
                 reasons,
             };
-            console.log(">", (fields as any)[key]);
             allValid = (allValid && fieldIsValid) || !isValidating;
         });
         if (allValid) {
@@ -62,12 +61,10 @@ export const useValidation = <P extends ValidationMapProvider>(validationMapProv
     };
 
     if (!state.current) {
-        console.log("initial validate");
         validateInternal(false);
     }
 
     if (state.current!.isValidating) {
-        console.log("autovalidate ");
         validateInternal(false);
     }
 

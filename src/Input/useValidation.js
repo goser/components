@@ -39,7 +39,6 @@ var useValidation = function (validationMapProvider) {
                 isValid: fieldIsValid || !isValidating,
                 reasons: reasons,
             };
-            console.log(">", fields[key]);
             allValid = (allValid && fieldIsValid) || !isValidating;
         });
         if (allValid) {
@@ -52,11 +51,9 @@ var useValidation = function (validationMapProvider) {
         };
     };
     if (!state.current) {
-        console.log("initial validate");
         validateInternal(false);
     }
     if (state.current.isValidating) {
-        console.log("autovalidate ");
         validateInternal(false);
     }
     var validate = function () {
