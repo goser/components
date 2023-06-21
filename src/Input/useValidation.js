@@ -27,20 +27,24 @@ var useValidation = function (validationMapProvider) {
         Object.entries(validationMap).forEach(function (_a) {
             var key = _a[0], reasonMap = _a[1];
             var reasons = [];
-            var isValid = true;
+            var fieldIsValid = true;
             Object.entries(reasonMap).forEach(function (_a) {
                 var reason = _a[0], active = _a[1];
                 if (active) {
                     reasons.push(reason);
-                    isValid = false;
+                    fieldIsValid = false;
                 }
             });
             fields[key] = {
-                isValid: isValid || !isValidating,
+                isValid: fieldIsValid || !isValidating,
                 reasons: reasons,
             };
-            allValid = (allValid && isValid) || !isValidating;
+            console.log(">", fields[key]);
+            allValid = (allValid && fieldIsValid) || !isValidating;
         });
+        if (allValid) {
+            isValidating = false;
+        }
         state.current = {
             isValid: allValid,
             isValidating: isValidating,

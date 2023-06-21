@@ -12,9 +12,10 @@ type Props = {
     max?: number | string;
     placeholder?: string;
     invalid?: boolean;
+    title?: string;
 } & PropsWithStyle;
 
-export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid}) => {
+export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid, title}) => {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.currentTarget.value);
     } : undefined;
@@ -27,5 +28,6 @@ export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max,
         max={max}
         min={min}
         placeholder={placeholder}
+        title={title}
     />;
 };

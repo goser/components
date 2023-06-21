@@ -5,8 +5,12 @@ import {PropsWithStyle} from '../types/PropsWithStyle';
 
 type Props = {
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+    disabled?: boolean;
 } & PropsWithStyle & PropsWithChildren;
 
-export const Button: FC<Props> = ({className, children, onClick}) => {
-    return <button className={cls(className, styles.main)} onClick={onClick}>{children}</button>;
+export const Button: FC<Props> = ({className, children, onClick, disabled}) => {
+    return <button
+        className={cls(className, styles.main)}
+        onClick={onClick}
+        disabled={disabled}>{children}</button>;
 }; 

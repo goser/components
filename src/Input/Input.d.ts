@@ -9,6 +9,7 @@ type Props = {
     max?: number | string;
     placeholder?: string;
     invalid?: boolean;
+    title?: string;
 } & PropsWithStyle;
 export declare const Input: FC<Props>;
 export {};

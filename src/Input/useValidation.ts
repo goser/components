@@ -33,23 +33,27 @@ export const useValidation = <P extends ValidationMapProvider>(validationMapProv
     const validateInternal = (activate: boolean) => {
         const validationMap = validationMapProvider();
         const fields: ValidationFieldMap<P> = {} as any;
-        const isValidating = state.current?.isValidating || activate;
+        let isValidating = state.current?.isValidating || activate;
         let allValid = true;
         Object.entries(validationMap).forEach(([key, reasonMap]) => {
             const reasons: string[] = [];
-            let isValid = true;
+            let fieldIsValid = true;
             Object.entries(reasonMap).forEach(([reason, active]) => {
                 if (active) {
                     reasons.push(reason);
-                    isValid = false;
+                    fieldIsValid = false;
                 }
             });
             (fields as any)[key] = {
-                isValid: isValid || !isValidating,
+                isValid: fieldIsValid || !isValidating,
                 reasons,
             };
-            allValid = (allValid && isValid) || !isValidating;
+            console.log(">", (fields as any)[key]);
+            allValid = (allValid && fieldIsValid) || !isValidating;
         });
+        if (allValid) {
+            isValidating = false;
+        }
         state.current = {
             isValid: allValid,
             isValidating,
