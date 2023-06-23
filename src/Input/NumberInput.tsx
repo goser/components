@@ -7,9 +7,10 @@ type Props = {
     onChange?: (newValue: number) => void;
     min?: number | undefined;
     max?: number | undefined;
+    invalid?: boolean;
 } & PropsWithStyle;
 
-export const NumberInput: FC<Props> = ({className, value, onChange, min, max}) => {
+export const NumberInput: FC<Props> = ({className, value, onChange, min, max, invalid}) => {
     let onInputChange: ((value: string) => void) | undefined;
     let onBlur: VoidFunction | undefined;
     if (onChange) {
@@ -27,5 +28,13 @@ export const NumberInput: FC<Props> = ({className, value, onChange, min, max}) =
             }
         };
     }
-    return <Input className={className} value={value.toString()} onChange={onInputChange} type='number' onBlur={onBlur} min={min} max={max} />;
+    return <Input
+        className={className}
+        value={value.toString()}
+        onChange={onInputChange}
+        type='number'
+        onBlur={onBlur}
+        min={min}
+        max={max}
+        invalid={invalid} />;
 };
