@@ -61,6 +61,9 @@ var useValidation = function (validationMapProvider) {
         forceUpdate();
         return state.current.isValid;
     };
-    return __assign(__assign({}, state.current), { validate: validate });
+    var getValidationResult = function () {
+        return __assign({}, state.current);
+    };
+    return __assign(__assign({}, state.current), { validate: validate, getValidationResult: getValidationResult });
 };
 exports.useValidation = useValidation;

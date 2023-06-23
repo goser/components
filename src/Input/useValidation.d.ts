@@ -17,6 +17,7 @@ type ValidationState<T extends ValidationMapProvider> = {
 };
 type Validation<T extends ValidationMapProvider> = ValidationState<T> & {
     validate: () => boolean;
+    getValidationResult: () => ValidationState<T>;
 };
 export declare const useValidation: <P extends ValidationMapProvider>(validationMapProvider: P) => Validation<P>;
 export {};

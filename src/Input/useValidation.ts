@@ -22,6 +22,7 @@ type ValidationState<T extends ValidationMapProvider> = {
 
 type Validation<T extends ValidationMapProvider> = ValidationState<T> & {
     validate: () => boolean;
+    getValidationResult: () => ValidationState<T>;
 };
 
 export const useValidation = <P extends ValidationMapProvider>(validationMapProvider: P): Validation<P> => {
@@ -74,8 +75,13 @@ export const useValidation = <P extends ValidationMapProvider>(validationMapProv
         return state.current!.isValid;
     };
 
+    const getValidationResult = () => {
+        return {...state.current!};
+    };
+
     return {
         ...state.current!,
-        validate
+        validate,
+        getValidationResult,
     };
 };
