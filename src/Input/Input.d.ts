@@ -10,6 +10,7 @@ type Props = {
     placeholder?: string;
     invalid?: boolean;
     title?: string;
+    autoFocus?: boolean;
 } & PropsWithStyle;
 export declare const Input: FC<Props>;
 export {};

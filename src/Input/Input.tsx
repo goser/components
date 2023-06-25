@@ -13,9 +13,10 @@ type Props = {
     placeholder?: string;
     invalid?: boolean;
     title?: string;
+    autoFocus?: boolean;
 } & PropsWithStyle;
 
-export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid, title}) => {
+export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid, title, autoFocus}) => {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.currentTarget.value);
     } : undefined;
@@ -29,5 +30,6 @@ export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max,
         min={min}
         placeholder={placeholder}
         title={title}
+        autoFocus={autoFocus}
     />;
 };
