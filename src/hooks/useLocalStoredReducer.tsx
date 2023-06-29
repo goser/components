@@ -1,6 +1,6 @@
-import { Reducer, ReducerState, useCallback, useReducer } from 'react';
+import {Dispatch, Reducer, useCallback, useReducer} from 'react';
 
-export const useLocalStoredReducer = <R extends Reducer<any, any>, S extends ReducerState<R>>(storageName: string, reducer: R, initialState: S) => {
+export const useLocalStoredReducer = <S extends object, A extends any>(storageName: string, reducer: Reducer<S, A>, initialState: S): [S, Dispatch<A>] => {
 
     const load = useCallback(() => {
         const data = window.localStorage.getItem(storageName);
@@ -15,13 +15,13 @@ export const useLocalStoredReducer = <R extends Reducer<any, any>, S extends Red
         state = reducer(state, action);
         save(state);
         return state;
-    }, [reducer, save])
+    }, [reducer, save]);
 
     const initializer = useCallback((state: S) => {
-        state = { ...state, ...load() };
+        state = {...state, ...load()};
         save(state);
         return state;
     }, [load, save]);
 
     return useReducer(reducerWithSave, initialState, initializer);
-}
+};
