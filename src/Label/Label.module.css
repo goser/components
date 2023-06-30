@@ -1,5 +1,5 @@
 .main {
-    padding: var(--std-padding);
+    padding: var(--std-vertical-padding) 0;
 }
 
 .disabled {
