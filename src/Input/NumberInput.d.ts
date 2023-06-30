@@ -6,6 +6,7 @@ type Props = {
     min?: number | undefined;
     max?: number | undefined;
     invalid?: boolean;
+    disabled?: boolean;
 } & PropsWithStyle;
 export declare const NumberInput: FC<Props>;
 export {};

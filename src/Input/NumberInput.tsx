@@ -1,6 +1,6 @@
 import {FC} from 'react';
-import {Input} from './Input';
 import {PropsWithStyle} from '../types/PropsWithStyle';
+import {Input} from './Input';
 
 type Props = {
     value: number;
@@ -8,9 +8,10 @@ type Props = {
     min?: number | undefined;
     max?: number | undefined;
     invalid?: boolean;
+    disabled?: boolean;
 } & PropsWithStyle;
 
-export const NumberInput: FC<Props> = ({className, value, onChange, min, max, invalid}) => {
+export const NumberInput: FC<Props> = ({className, value, onChange, min, max, invalid, disabled}) => {
     let onInputChange: ((value: string) => void) | undefined;
     let onBlur: VoidFunction | undefined;
     if (onChange) {
@@ -30,6 +31,7 @@ export const NumberInput: FC<Props> = ({className, value, onChange, min, max, in
     }
     return <Input
         className={className}
+        disabled={disabled}
         value={value.toString()}
         onChange={onInputChange}
         type='number'

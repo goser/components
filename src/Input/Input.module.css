@@ -7,3 +7,7 @@
     outline-color: red;
     border-color: red;
 }
+
+.main:disabled {
+    color: var(--std-disabled-color);
+}

@@ -40,6 +40,7 @@ h6 {
     --std-font-size: 20px;
 
     --std-color: #000;
+    --std-disabled-color: #aaa;
 
     --std-horizontal-padding: 10px;
     --std-vertical-padding: 5px;

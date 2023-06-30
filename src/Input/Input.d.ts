@@ -11,6 +11,7 @@ type Props = {
     invalid?: boolean;
     title?: string;
     autoFocus?: boolean;
+    disabled?: boolean;
 } & PropsWithStyle;
 export declare const Input: FC<Props>;
 export {};
