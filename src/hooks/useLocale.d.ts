@@ -1,3 +1,7 @@
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 export declare const useLocale: () => string;
-export declare const LocaleContextProvider: FC<any>;
+type Props = {
+    locale: string;
+} & PropsWithChildren;
+export declare const LocaleContextProvider: FC<Props>;
+export {};
