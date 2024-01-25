@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: var(--std-gap);
+    align-items: center;
+}
+
+.checkbox {
+    width: 1em;
+    height: 1em;
+}

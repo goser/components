@@ -1,0 +1,13 @@
+.main {
+    padding: var(--std-padding);
+    min-width: 0;
+}
+
+.invalid {
+    outline-color: red;
+    border-color: red;
+}
+
+.main:disabled {
+    color: var(--std-disabled-color);
+}

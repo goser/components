@@ -1,9 +1,9 @@
 {
     "name": "@goser/components",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "license": "MIT",
-    "main": "src/index.js",
-    "types": "src/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "private": "true",
     "repository": {
         "type": "git",
@@ -25,12 +25,12 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
-        "build": "rm -rf dist && node_modules/.bin/tsc",
+        "build": "rm -rf dist/* && rsync -am --include=*/ --include=*.css --exclude=* src/ dist/ && node_modules/.bin/tsc",
         "watch": "node_modules/.bin/tsc --watch",
         "test": "jest"
     },
     "files": [
-        "src/**/*.*"
+        "dist/**/*.*"
     ],
     "dependencies": {
         "@goser/common": "https://github.com/goser/common.git"
