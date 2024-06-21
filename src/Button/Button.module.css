@@ -2,3 +2,7 @@
     cursor: pointer;
     padding: var(--std-padding);
 }
+
+.main:disabled {
+    cursor: default;
+}
