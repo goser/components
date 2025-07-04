@@ -1,4 +1,4 @@
-import { type FC, type MouseEventHandler, type PropsWithChildren } from 'react';
+import { type MouseEventHandler, type PropsWithChildren } from 'react';
 import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     autoFocus?: boolean;
@@ -6,5 +6,5 @@ type Props = {
     disabled?: boolean;
     title?: string;
 } & PropsWithStyle & PropsWithChildren;
-export declare const Button: FC<Props>;
+export declare function Button({ className, children, onClick, disabled, title, autoFocus }: Props): import("react/jsx-runtime").JSX.Element;
 export {};

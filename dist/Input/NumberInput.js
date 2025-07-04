@@ -1,8 +1,7 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import {} from 'react';
 import {} from '../types/PropsWithStyle';
 import { Input } from './Input';
-export const NumberInput = ({ className, value, onChange, min, max, invalid, disabled }) => {
+export function NumberInput({ className, value, onChange, min, max, invalid, disabled }) {
     let onInputChange;
     let onBlur;
     if (onChange) {
@@ -21,4 +20,4 @@ export const NumberInput = ({ className, value, onChange, min, max, invalid, dis
         };
     }
     return _jsx(Input, { className: className, disabled: disabled, value: value.toString(), onChange: onInputChange, type: 'number', onBlur: onBlur, min: min, max: max, invalid: invalid });
-};
+}

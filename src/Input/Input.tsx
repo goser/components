@@ -1,5 +1,5 @@
 import {cls} from '@goser/common'
-import {type ChangeEventHandler, type FC, type HTMLInputTypeAttribute} from 'react'
+import {type ChangeEventHandler, type HTMLInputTypeAttribute} from 'react'
 import {type PropsWithStyle} from '../types/PropsWithStyle'
 import styles from './Input.module.css'
 
@@ -17,7 +17,7 @@ type Props = {
     disabled?: boolean
 } & PropsWithStyle
 
-export const Input: FC<Props> = ({className, value, onChange, type, onBlur, max, min, placeholder, invalid, title, autoFocus, disabled}) => {
+export function Input({className, value, onChange, type, onBlur, max, min, placeholder, invalid, title, autoFocus, disabled}: Props) {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.currentTarget.value)
     } : undefined

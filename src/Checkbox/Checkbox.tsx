@@ -1,5 +1,5 @@
 import {cls} from '@goser/common'
-import {type ChangeEventHandler, type FC, type PropsWithChildren} from 'react'
+import {type ChangeEventHandler, type PropsWithChildren} from 'react'
 import {type PropsWithStyle} from '../types'
 import styles from './Checkbox.module.css'
 
@@ -8,7 +8,7 @@ type Props = {
     onChange?: (value: boolean) => void
 } & PropsWithStyle & PropsWithChildren
 
-export const Checkbox: FC<Props> = ({className, children, checked, onChange}) => {
+export function Checkbox({className, children, checked, onChange}: Props) {
     const onInputChange: ChangeEventHandler<HTMLInputElement> | undefined = onChange ? (event) => {
         onChange(event.target.checked)
     } : undefined

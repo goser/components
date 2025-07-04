@@ -1,4 +1,3 @@
-import { type FC } from 'react';
 import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     value: number;
@@ -8,5 +7,5 @@ type Props = {
     invalid?: boolean;
     disabled?: boolean;
 } & PropsWithStyle;
-export declare const NumberInput: FC<Props>;
+export declare function NumberInput({ className, value, onChange, min, max, invalid, disabled }: Props): import("react/jsx-runtime").JSX.Element;
 export {};

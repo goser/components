@@ -1,4 +1,4 @@
-import { type FC, type HTMLInputTypeAttribute } from 'react';
+import { type HTMLInputTypeAttribute } from 'react';
 import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     value: string;
@@ -13,5 +13,5 @@ type Props = {
     autoFocus?: boolean;
     disabled?: boolean;
 } & PropsWithStyle;
-export declare const Input: FC<Props>;
+export declare function Input({ className, value, onChange, type, onBlur, max, min, placeholder, invalid, title, autoFocus, disabled }: Props): import("react/jsx-runtime").JSX.Element;
 export {};

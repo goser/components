@@ -1,4 +1,3 @@
-import {type FC} from 'react'
 import {type PropsWithStyle} from '../types/PropsWithStyle'
 import {Input} from './Input'
 
@@ -11,7 +10,7 @@ type Props = {
     disabled?: boolean
 } & PropsWithStyle
 
-export const NumberInput: FC<Props> = ({className, value, onChange, min, max, invalid, disabled}) => {
+export function NumberInput({className, value, onChange, min, max, invalid, disabled}: Props) {
     let onInputChange: ((value: string) => void) | undefined
     let onBlur: VoidFunction | undefined
     if (onChange) {

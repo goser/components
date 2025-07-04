@@ -4,7 +4,7 @@ import { useLocale } from './useLocale';
 const DEFAULT = {};
 const CONTEXT = createContext(DEFAULT);
 export const useWordingContext = () => useContext(CONTEXT);
-export const WordingContextProvider = ({ children, wordingResolver }) => {
+export function WordingContextProvider({ children, wordingResolver }) {
     const locale = useLocale();
     const [value, setValue] = useState(DEFAULT);
     useEffect(() => {
@@ -23,4 +23,4 @@ export const WordingContextProvider = ({ children, wordingResolver }) => {
     }, [locale, wordingResolver]);
     const Provider = CONTEXT.Provider;
     return _jsx(Provider, { value: value, children: value !== DEFAULT && children });
-};
+}

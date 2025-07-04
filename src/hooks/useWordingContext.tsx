@@ -1,4 +1,4 @@
-import {type FC, type PropsWithChildren, createContext, useContext, useEffect, useState} from 'react'
+import {type PropsWithChildren, createContext, useContext, useEffect, useState} from 'react'
 import {useLocale} from './useLocale'
 
 const DEFAULT = {}
@@ -13,7 +13,7 @@ type Props = PropsWithChildren & {
     wordingResolver: WordingResolver
 }
 
-export const WordingContextProvider: FC<Props> = ({children, wordingResolver}) => {
+export function WordingContextProvider({children, wordingResolver}: Props) {
     const locale = useLocale()
     const [value, setValue] = useState<any>(DEFAULT)
     useEffect(() => {
