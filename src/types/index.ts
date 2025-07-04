@@ -1,1 +1,1 @@
-export * from './PropsWithStyle';
+export * from './PropsWithStyle'

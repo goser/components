@@ -1,33 +1,33 @@
-import {FC} from 'react';
-import {PropsWithStyle} from '../types/PropsWithStyle';
-import {Input} from './Input';
+import {type FC} from 'react'
+import {type PropsWithStyle} from '../types/PropsWithStyle'
+import {Input} from './Input'
 
 type Props = {
-    value: number;
-    onChange?: (newValue: number) => void;
-    min?: number | undefined;
-    max?: number | undefined;
-    invalid?: boolean;
-    disabled?: boolean;
-} & PropsWithStyle;
+    value: number
+    onChange?: (newValue: number) => void
+    min?: number | undefined
+    max?: number | undefined
+    invalid?: boolean
+    disabled?: boolean
+} & PropsWithStyle
 
 export const NumberInput: FC<Props> = ({className, value, onChange, min, max, invalid, disabled}) => {
-    let onInputChange: ((value: string) => void) | undefined;
-    let onBlur: VoidFunction | undefined;
+    let onInputChange: ((value: string) => void) | undefined
+    let onBlur: VoidFunction | undefined
     if (onChange) {
-        onInputChange = value => onChange(parseInt(value));
+        onInputChange = value => onChange(parseInt(value))
         onBlur = () => {
-            let newValue = value;
+            let newValue = value
             if (min !== undefined) {
-                newValue = Math.max(min, newValue);
+                newValue = Math.max(min, newValue)
             }
             if (max !== undefined) {
-                newValue = Math.min(max, newValue);
+                newValue = Math.min(max, newValue)
             }
             if (newValue !== value) {
-                onChange(newValue);
+                onChange(newValue)
             }
-        };
+        }
     }
     return <Input
         className={className}
@@ -38,5 +38,5 @@ export const NumberInput: FC<Props> = ({className, value, onChange, min, max, in
         onBlur={onBlur}
         min={min}
         max={max}
-        invalid={invalid} />;
-};
+        invalid={invalid} />
+}

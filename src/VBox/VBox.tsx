@@ -1,10 +1,10 @@
-import {cls} from '@goser/common';
-import {FC, PropsWithChildren} from 'react';
-import styles from './VBox.module.css';
-import {PropsWithStyle} from '../types/PropsWithStyle';
+import {cls} from '@goser/common'
+import type {FC, PropsWithChildren} from 'react'
+import type {PropsWithStyle} from '../types/PropsWithStyle'
+import styles from './VBox.module.css'
 
-type Props = PropsWithStyle & PropsWithChildren;
+type Props = PropsWithStyle & PropsWithChildren
 
 export const VBox: FC<Props> = ({className, children}) => {
-    return <div className={cls(className, styles.main)}>{children}</div>;
-};
+    return <div className={cls(className, styles.main)}>{children}</div>
+}

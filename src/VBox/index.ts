@@ -1,1 +1,1 @@
-export * from './VBox';
+export * from './VBox'

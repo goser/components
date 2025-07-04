@@ -1,18 +1,18 @@
-import {FC, PropsWithChildren, createContext, useContext} from 'react';
+import {type FC, type PropsWithChildren, createContext, useContext} from 'react'
 
-const DEFAULT_VALUE = 'en';
+const DEFAULT_VALUE = 'en'
 
-const CONTEXT = createContext(DEFAULT_VALUE);
+const CONTEXT = createContext(DEFAULT_VALUE)
 
-export const useLocale = () => useContext(CONTEXT);
+export const useLocale = () => useContext(CONTEXT)
 
 type Props = {
-    locale: string;
-} & PropsWithChildren;
+    locale: string
+} & PropsWithChildren
 
 export const LocaleContextProvider: FC<Props> = ({children, locale}) => {
-    const Provider = CONTEXT.Provider;
+    const Provider = CONTEXT.Provider
     return <Provider value={locale}>
         {children}
-    </Provider>;
-};
+    </Provider>
+}

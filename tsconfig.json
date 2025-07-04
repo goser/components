@@ -9,16 +9,23 @@
         "rootDir": "src",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "strict": true,
         "noImplicitAny": true,
         "skipLibCheck": true,
         "strictNullChecks": true,
         "isolatedModules": true,
+        "verbatimModuleSyntax": true,
         "lib": [
             "dom",
             "dom.iterable",
             "esnext"
-        ]
+        ],
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "erasableSyntaxOnly": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true
     },
     "exclude": [
         "dist",
