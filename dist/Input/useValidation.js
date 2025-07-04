@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useForceUpdate } from '../hooks';
 export const useValidation = (validationMapProvider) => {
     const forceUpdate = useForceUpdate();
-    const state = useRef();
+    const state = useRef(null);
     // TODO useCallback?
     const validateInternal = (activate) => {
         const validationMap = validationMapProvider();
