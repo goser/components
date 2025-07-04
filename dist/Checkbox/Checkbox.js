@@ -1,5 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { cls } from '@goser/common';
+import {} from 'react';
+import {} from '../types';
 import styles from './Checkbox.module.css';
 export const Checkbox = ({ className, children, checked, onChange }) => {
     const onInputChange = onChange ? (event) => {

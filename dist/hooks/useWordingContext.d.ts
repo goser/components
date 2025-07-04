@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 export declare const useWordingContext: () => {};
 type WordingResolver = (locale: string) => Promise<any>;
 type Props = PropsWithChildren & {

@@ -1,5 +1,5 @@
-import { FC, HTMLInputTypeAttribute } from 'react';
-import { PropsWithStyle } from '../types/PropsWithStyle';
+import { type FC, type HTMLInputTypeAttribute } from 'react';
+import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     value: string;
     onChange?: (value: string) => void;

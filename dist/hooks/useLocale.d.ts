@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { type FC, type PropsWithChildren } from 'react';
 export declare const useLocale: () => string;
 type Props = {
     locale: string;

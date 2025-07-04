@@ -1,4 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
+import {} from 'react';
+import {} from '../types/PropsWithStyle';
 import { Input } from './Input';
 export const NumberInput = ({ className, value, onChange, min, max, invalid, disabled }) => {
     let onInputChange;

@@ -1,5 +1,5 @@
-import { FC, MouseEventHandler, PropsWithChildren } from 'react';
-import { PropsWithStyle } from '../types/PropsWithStyle';
+import { type FC, type MouseEventHandler, type PropsWithChildren } from 'react';
+import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     autoFocus?: boolean;
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;

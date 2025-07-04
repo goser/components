@@ -1,5 +1,5 @@
-import { FC, PropsWithChildren } from 'react';
-import { PropsWithStyle } from '../types';
+import { type FC, type PropsWithChildren } from 'react';
+import { type PropsWithStyle } from '../types';
 type Props = {
     checked?: boolean;
     onChange?: (value: boolean) => void;

@@ -1,10 +1,11 @@
 {
     "name": "@goser/components",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "private": "true",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "https://github.com/goser/components.git"

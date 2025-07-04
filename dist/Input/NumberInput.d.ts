@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { PropsWithStyle } from '../types/PropsWithStyle';
+import { type FC } from 'react';
+import { type PropsWithStyle } from '../types/PropsWithStyle';
 type Props = {
     value: number;
     onChange?: (newValue: number) => void;
