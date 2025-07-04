@@ -1,6 +1,6 @@
 {
     "name": "@goser/components",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -16,8 +16,8 @@
         "vitest": "^3.2.4"
     },
     "peerDependencies": {
-        "react": "^19.1.8",
-        "react-dom": "^19.1.8"
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
     },
     "scripts": {
         "build": "rm -rf dist/* && rsync -am --include=*/ --include=*.css --exclude=* src/ dist/ && node_modules/.bin/tsc",
